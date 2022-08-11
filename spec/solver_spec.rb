@@ -32,4 +32,18 @@ RSpec.describe Solver do
       expect(solver.factorial(5)).to be 120
     end
   end
+
+  context 'when we test the reverse method' do
+    it 'should return the reverse string when the string is more than one character' do
+      solver = Solver.new
+
+      expect(solver.reverse('hello')).to eq 'olleh'
+    end
+
+    it 'should return the reverse string when the string is more than one number' do
+      solver = Solver.new
+
+      expect(solver.reverse(12_345)).to eq '54321'
+    end
+  end
 end
